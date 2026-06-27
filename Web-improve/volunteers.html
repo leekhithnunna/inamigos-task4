@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volunteer Management - InAmigos Foundation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f6f8fb;
+}
+
+/* HERO */
+
+.hero{
+height:320px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1559027615-cd4628902d4c');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+opacity:.9;
+}
+
+/* STATS */
+
+.stats{
+padding:50px 8%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.stat-card{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.stat-card h2{
+color:#00b894;
+font-size:32px;
+}
+
+.stat-card p{
+margin-top:10px;
+color:#666;
+}
+
+/* SEARCH */
+
+.controls{
+padding:10px 8% 40px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.search{
+flex:1;
+min-width:280px;
+}
+
+.search input{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.filters{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.filter-btn{
+padding:12px 18px;
+border:none;
+border-radius:25px;
+background:white;
+cursor:pointer;
+font-weight:500;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.filter-btn.active{
+background:#00b894;
+color:white;
+}
+
+/* VOLUNTEERS */
+
+.container{
+padding:0 8% 80px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+
+.content{
+padding:25px;
+}
+
+.badge{
+display:inline-block;
+padding:6px 14px;
+background:#e8fff8;
+color:#00b894;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.name{
+font-size:24px;
+font-weight:600;
+}
+
+.role{
+color:#777;
+margin-bottom:15px;
+}
+
+.bio{
+font-size:14px;
+line-height:1.7;
+color:#555;
+margin-bottom:18px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:18px;
+}
+
+.skill{
+background:#f1f5f9;
+padding:6px 10px;
+border-radius:20px;
+font-size:12px;
+}
+
+.metrics{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+padding-top:20px;
+border-top:1px solid #eee;
+}
+
+.metric{
+text-align:center;
+}
+
+.metric h4{
+color:#00b894;
+}
+
+.actions{
+margin-top:20px;
+display:flex;
+gap:10px;
+}
+
+.btn{
+flex:1;
+padding:12px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.primary{
+background:#00b894;
+color:white;
+}
+
+.secondary{
+background:#eef3f8;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+<div>
+<h1>Meet Our Volunteers</h1>
+<p>The people creating social impact across India</p>
+</div>
+</section>
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>250+</h2>
+<p>Active Volunteers</p>
+</div>
+
+<div class="stat-card">
+<h2>15,000+</h2>
+<p>Volunteer Hours</p>
+</div>
+
+<div class="stat-card">
+<h2>180+</h2>
+<p>Events Organized</p>
+</div>
+
+<div class="stat-card">
+<h2>50,000+</h2>
+<p>Lives Impacted</p>
+</div>
+
+</section>
+
+<section class="controls">
+
+<div class="search">
+<input type="text" placeholder="Search volunteer by name, skill or department">
+</div>
+
+<div class="filters">
+<button class="filter-btn active">All</button>
+<button class="filter-btn">Core Team</button>
+<button class="filter-btn">CSR</button>
+<button class="filter-btn">HR</button>
+<button class="filter-btn">Internship</button>
+</div>
+
+</section>
+
+<section class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43">
+
+<div class="content">
+
+<span class="badge">Founder & CEO</span>
+
+<div class="name">Govind Shukla</div>
+
+<div class="role">Leadership Team</div>
+
+<p class="bio">
+Leading social initiatives focused on education,
+community development and volunteer engagement.
+</p>
+
+<div class="skills">
+<span class="skill">Leadership</span>
+<span class="skill">Fundraising</span>
+<span class="skill">NGO Management</span>
+</div>
+
+<div class="metrics">
+
+<div class="metric">
+<h4>120</h4>
+<p>Projects</p>
+</div>
+
+<div class="metric">
+<h4>3500</h4>
+<p>Hours</p>
+</div>
+
+<div class="metric">
+<h4>25</h4>
+<p>Awards</p>
+</div>
+
+</div>
+
+<div class="actions">
+<button class="btn primary">View Profile</button>
+<button class="btn secondary">LinkedIn</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+<div class="content">
+
+<span class="badge">Top Volunteer</span>
+
+<div class="name">Sagarika Jaiswal</div>
+
+<div class="role">Head of Core Team</div>
+
+<p class="bio">
+Coordinates volunteer programs, awareness campaigns
+and community outreach initiatives.
+</p>
+
+<div class="skills">
+<span class="skill">Management</span>
+<span class="skill">Public Relations</span>
+<span class="skill">Training</span>
+</div>
+
+<div class="metrics">
+
+<div class="metric">
+<h4>90</h4>
+<p>Projects</p>
+</div>
+
+<div class="metric">
+<h4>2400</h4>
+<p>Hours</p>
+</div>
+
+<div class="metric">
+<h4>18</h4>
+<p>Events</p>
+</div>
+
+</div>
+
+<div class="actions">
+<button class="btn primary">View Profile</button>
+<button class="btn secondary">LinkedIn</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1">
+
+<div class="content">
+
+<span class="badge">CSR Lead</span>
+
+<div class="name">Madhusoodan M</div>
+
+<div class="role">CSR Department</div>
+
+<p class="bio">
+Responsible for corporate partnerships and CSR
+engagement programs.
+</p>
+
+<div class="skills">
+<span class="skill">CSR</span>
+<span class="skill">Networking</span>
+<span class="skill">Partnerships</span>
+</div>
+
+<div class="metrics">
+
+<div class="metric">
+<h4>65</h4>
+<p>Projects</p>
+</div>
+
+<div class="metric">
+<h4>1700</h4>
+<p>Hours</p>
+</div>
+
+<div class="metric">
+<h4>30</h4>
+<p>Partners</p>
+</div>
+
+</div>
+
+<div class="actions">
+<button class="btn primary">View Profile</button>
+<button class="btn secondary">LinkedIn</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

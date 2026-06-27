@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events & Campaigns</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f9fc;
+}
+
+/* HERO */
+
+.hero{
+height:420px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+opacity:.9;
+}
+
+/* EVENT STATUS */
+
+.status{
+display:inline-block;
+padding:10px 22px;
+background:#00c26e;
+border-radius:30px;
+font-weight:600;
+margin-top:20px;
+}
+
+/* MAIN */
+
+.container{
+max-width:1300px;
+margin:auto;
+padding:70px 30px;
+}
+
+/* TOP */
+
+.top-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:35px;
+}
+
+.event-banner{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.event-banner img{
+width:100%;
+height:450px;
+object-fit:cover;
+}
+
+.event-content{
+padding:30px;
+}
+
+.event-content h2{
+margin-bottom:15px;
+font-size:36px;
+}
+
+.event-content p{
+line-height:1.8;
+color:#666;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card h3{
+margin-bottom:20px;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+text-align:center;
+}
+
+.box{
+background:#00c26e;
+color:white;
+padding:15px;
+border-radius:12px;
+}
+
+.box h2{
+font-size:28px;
+}
+
+/* BUTTONS */
+
+.btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;
+margin-bottom:12px;
+}
+
+.primary{
+background:#00c26e;
+color:white;
+}
+
+.secondary{
+background:#eef3f8;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:50px;
+}
+
+.stat{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.stat h2{
+color:#00c26e;
+font-size:32px;
+}
+
+/* AGENDA */
+
+.section-title{
+font-size:34px;
+margin:60px 0 30px;
+}
+
+.timeline{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.timeline-item{
+background:white;
+padding:25px;
+border-left:5px solid #00c26e;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.time{
+font-weight:700;
+color:#00c26e;
+margin-bottom:8px;
+}
+
+/* SPEAKERS */
+
+.speakers{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.speaker{
+background:white;
+padding:25px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.speaker img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+}
+
+/* FILTERS */
+
+.filters{
+display:flex;
+gap:15px;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+.filter{
+padding:10px 20px;
+background:white;
+border-radius:30px;
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+cursor:pointer;
+}
+
+@media(max-width:900px){
+
+.top-grid{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div>
+<h1>World Water Day 2026</h1>
+<p>Together for a Water Secure Future</p>
+<div class="status">Upcoming Event</div>
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="filters">
+<div class="filter">Community</div>
+<div class="filter">Education</div>
+<div class="filter">Environment</div>
+<div class="filter">Women Empowerment</div>
+</div>
+
+<div class="top-grid">
+
+<div class="event-banner">
+
+<img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09">
+
+<div class="event-content">
+
+<h2>World Water Day Awareness Campaign</h2>
+
+<p>
+Join volunteers, environmental experts and community leaders
+to spread awareness about water conservation and sustainability.
+Participants can attend workshops, awareness drives and
+community engagement activities.
+</p>
+
+</div>
+
+</div>
+
+<div class="sidebar">
+
+<div class="card">
+
+<h3>Live Countdown</h3>
+
+<div class="countdown">
+
+<div class="box">
+<h2 id="days">15</h2>
+<p>Days</p>
+</div>
+
+<div class="box">
+<h2 id="hours">10</h2>
+<p>Hours</p>
+</div>
+
+<div class="box">
+<h2 id="mins">45</h2>
+<p>Min</p>
+</div>
+
+<div class="box">
+<h2 id="secs">22</h2>
+<p>Sec</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h3>Registration</h3>
+
+<button class="btn primary">RSVP Now</button>
+
+<button class="btn secondary">Add to Google Calendar</button>
+
+<button class="btn secondary">Share Event</button>
+
+</div>
+
+<div class="card">
+
+<h3>Event Details</h3>
+
+<p><strong>Date:</strong> 22 March 2026</p><br>
+<p><strong>Location:</strong> Bengaluru</p><br>
+<p><strong>Organizer:</strong> InAmigos Foundation</p><br>
+<p><strong>Category:</strong> Community Awareness</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h2>850+</h2>
+<p>Registered Participants</p>
+</div>
+
+<div class="stat">
+<h2>60</h2>
+<p>Volunteers</p>
+</div>
+
+<div class="stat">
+<h2>15</h2>
+<p>Partner NGOs</p>
+</div>
+
+<div class="stat">
+<h2>5000+</h2>
+<p>People Reached</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Event Agenda</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="time">09:00 AM</div>
+Opening Ceremony & Welcome Address
+</div>
+
+<div class="timeline-item">
+<div class="time">10:00 AM</div>
+Water Conservation Expert Talk
+</div>
+
+<div class="timeline-item">
+<div class="time">12:00 PM</div>
+Community Awareness Campaign
+</div>
+
+<div class="timeline-item">
+<div class="time">03:00 PM</div>
+Volunteer Activities & Closing Session
+</div>
+
+</div>
+
+<h2 class="section-title">Speakers & Organizers</h2>
+
+<div class="speakers">
+
+<div class="speaker">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h3>Govind Shukla</h3>
+<p>Founder & CEO</p>
+</div>
+
+<div class="speaker">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h3>Sagarika Jaiswal</h3>
+<p>Event Coordinator</p>
+</div>
+
+<div class="speaker">
+<img src="https://randomuser.me/api/portraits/men/45.jpg">
+<h3>Khush Gupta</h3>
+<p>Volunteer Lead</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Previous Event Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1559027615-cd4628902d4c">
+<img src="https://images.unsplash.com/photo-1529390079861-591de354faf5">
+<img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846">
+
+</div>
+
+</div>
+
+<script>
+
+const targetDate = new Date("March 22, 2026 09:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+
+const gap = targetDate - now;
+
+const days = Math.floor(gap/(1000*60*60*24));
+const hours = Math.floor((gap%(1000*60*60*24))/(1000*60*60));
+const mins = Math.floor((gap%(1000*60*60))/(1000*60));
+const secs = Math.floor((gap%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("mins").innerHTML=mins;
+document.getElementById("secs").innerHTML=secs;
+
+},1000);
+
+</script>
+
+</body>
+</html>

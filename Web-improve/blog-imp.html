@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blogs & Success Stories</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f9fc;
+}
+
+/* HERO */
+
+.hero{
+height:450px;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:58px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+/* SEARCH */
+
+.search-section{
+padding:50px 8%;
+text-align:center;
+}
+
+.search-box{
+max-width:700px;
+margin:auto;
+display:flex;
+gap:10px;
+}
+
+.search-box input{
+flex:1;
+padding:18px;
+border:none;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.search-box button{
+padding:18px 30px;
+border:none;
+background:#00c26e;
+color:white;
+border-radius:12px;
+font-weight:600;
+cursor:pointer;
+}
+
+/* FEATURED */
+
+.featured{
+padding:0 8% 70px;
+}
+
+.featured-card{
+background:white;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+overflow:hidden;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.featured-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.featured-content{
+padding:40px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 15px;
+background:#e6fff3;
+color:#00c26e;
+border-radius:20px;
+font-size:13px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.featured-content h2{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.meta{
+color:#777;
+margin-bottom:20px;
+}
+
+/* FILTERS */
+
+.filters{
+padding:0 8% 40px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.filter{
+padding:10px 20px;
+background:white;
+border-radius:25px;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+/* BLOGS */
+
+.blog-grid{
+padding:0 8% 70px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.blog-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.blog-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.blog-content{
+padding:25px;
+}
+
+.blog-content h3{
+margin:15px 0;
+}
+
+.read-time{
+color:#00c26e;
+font-size:14px;
+font-weight:600;
+}
+
+.author{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:20px;
+}
+
+.author img{
+width:40px;
+height:40px;
+border-radius:50%;
+}
+
+/* SUCCESS STORIES */
+
+.section-title{
+font-size:38px;
+text-align:center;
+margin-bottom:40px;
+}
+
+.success{
+padding:30px 8% 80px;
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.story-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.story-card h3{
+color:#00c26e;
+margin-bottom:15px;
+}
+
+/* CTA */
+
+.cta{
+margin:70px 8%;
+background:#00c26e;
+color:white;
+padding:60px;
+border-radius:25px;
+text-align:center;
+}
+
+.cta h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.cta-buttons{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.cta button{
+padding:15px 28px;
+border:none;
+border-radius:10px;
+font-weight:600;
+cursor:pointer;
+}
+
+.white{
+background:white;
+color:#00c26e;
+}
+
+.transparent{
+background:transparent;
+border:2px solid white;
+color:white;
+}
+
+@media(max-width:900px){
+
+.featured-card{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div>
+<h1>Blogs & Success Stories</h1>
+<p>
+Inspiring stories, project achievements and community impact
+from across India.
+</p>
+</div>
+
+</section>
+
+<section class="search-section">
+
+<div class="search-box">
+<input type="text" placeholder="Search articles, projects or success stories...">
+<button>Search</button>
+</div>
+
+</section>
+
+<section class="featured">
+
+<div class="featured-card">
+
+<img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c">
+
+<div class="featured-content">
+
+<span class="badge">Featured Success Story</span>
+
+<h2>Project Vikas: Transforming Careers Through Internships</h2>
+
+<div class="meta">
+By Leekhith Nunna • 6 min read • 12,500 Views
+</div>
+
+<p>
+Over 30,000 students have benefited from internship and
+career development opportunities through Project Vikas,
+helping bridge the gap between education and employment.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="filters">
+
+<div class="filter">Education</div>
+<div class="filter">Women Empowerment</div>
+<div class="filter">Environment</div>
+<div class="filter">Animal Welfare</div>
+<div class="filter">Skill Development</div>
+
+</div>
+
+<section class="blog-grid">
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952">
+
+<div class="blog-content">
+
+<span class="read-time">5 Min Read</span>
+
+<h3>How Volunteers Changed 5,000 Lives</h3>
+
+<p>
+Discover how community volunteers contributed to
+education and welfare initiatives.
+</p>
+
+<div class="author">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<span>Sagarika Jaiswal</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09">
+
+<div class="blog-content">
+
+<span class="read-time">4 Min Read</span>
+
+<h3>Save Water, Save Life Campaign</h3>
+
+<p>
+Environmental awareness initiatives creating
+sustainable impact.
+</p>
+
+<div class="author">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<span>Govind Shukla</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="blog-card">
+
+<img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
+
+<div class="blog-content">
+
+<span class="read-time">7 Min Read</span>
+
+<h3>Empowering Women Through UDAAN</h3>
+
+<p>
+Success stories of women becoming financially
+independent through skill development.
+</p>
+
+<div class="author">
+<img src="https://randomuser.me/api/portraits/women/55.jpg">
+<span>Anusha</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="success">
+
+<h2 class="section-title">Community Success Stories</h2>
+
+<div class="story-grid">
+
+<div class="story-card">
+<h3>12,000+ Children Educated</h3>
+<p>
+Project BachpanShala continues to provide quality
+education and mentorship opportunities to underprivileged children.
+</p>
+</div>
+
+<div class="story-card">
+<h3>20,000+ Trees Planted</h3>
+<p>
+Project Prakriti has successfully improved environmental
+awareness and sustainability practices.
+</p>
+</div>
+
+<div class="story-card">
+<h3>50,000+ Lives Impacted</h3>
+<p>
+Project Seva has provided food, clothing and humanitarian
+support across multiple communities.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Become Part of the Story</h2>
+
+<p>
+Help us create more success stories through volunteering,
+donations and community participation.
+</p>
+
+<div class="cta-buttons">
+
+<button class="white">Become a Volunteer</button>
+
+<button class="transparent">Donate Now</button>
+
+</div>
+
+</section>
+
+</body>
+</html>
